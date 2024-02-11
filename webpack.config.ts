@@ -1,8 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path')
-const webpack = require('webpack')
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import path from 'path';
+import webpack from 'webpack';
 
-module.exports = {
+const config: webpack.Configuration = {
     mode: 'development',
     entry: path.resolve(__dirname, 'src', 'index.ts'),
     output: {
@@ -27,5 +27,7 @@ module.exports = {
             template: path.resolve(__dirname, 'public', 'index.html')
         }),
         new webpack.ProgressPlugin()
-    ]
+    ],
 }
+
+export default config
