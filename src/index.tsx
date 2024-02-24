@@ -1,6 +1,7 @@
 import { render } from 'react-dom'
+import { Test } from './components/Test'
 
 render(
-    <div>Hello, World</div>,
+    <div><Test /></div>,
     document.querySelector('#root')
 )
