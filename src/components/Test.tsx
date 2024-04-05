@@ -1,6 +1,5 @@
-import './Test.scss'
+import classes from './Test.module.scss'
 
 export function Test() {
-    console.log(1)
-    return <div className="root">Hi</div>
+  return <div className={classes.root}>Hi</div>
 }
