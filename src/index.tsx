@@ -1,7 +1,8 @@
 import { render } from 'react-dom'
-import { Test } from './components/Test'
+import App from './App'
+import './index.scss'
 
 render(
-    <div><Test /></div>,
+    <App />,
     document.querySelector('#root')
 )
