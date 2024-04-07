@@ -1,19 +1,11 @@
 import { Routes, Route, Link } from 'react-router-dom'
-import { Suspense, useState } from 'react'
+import { Suspense } from 'react'
 import { AboutPageAsync } from './pages/AboutPage/AboutPage.async'
 import { MainPageAsync } from './pages/MainPage/MainPage.async'
-
-enum Theme {
-  Light = 'light',
-  Dark = 'dark'
-}
+import { useTheme } from './theme/useTheme'
 
 export default function App() {
-  const [theme, setTheme] = useState<Theme>(Theme.Light)
-
-  const toggleTheme = () => {
-    setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light)
-  }
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <div className={`app ${theme}`}>
