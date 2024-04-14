@@ -9,8 +9,10 @@ interface NavbarProps {
 export const Navbar = ({ className }: NavbarProps) => {
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
-      <Link to={'/'}>Главная страница</Link>
-      <Link to={'/about'}>О сайте</Link>
+      <div className={cls.links}>
+        <Link to={'/'} className={cls.mainLink}>Главная страница</Link>
+        <Link to={'/about'}>О сайте</Link>
+      </div>
     </div>
   );
 };
