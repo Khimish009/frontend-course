@@ -19,7 +19,14 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'coverage',
+      'eslint.config.js',
+      'build',
+      '.history',
+    ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
