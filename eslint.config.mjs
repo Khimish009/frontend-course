@@ -58,12 +58,11 @@ export default tseslint.config(
       ],
       'react/function-component-definition': [
         'warn',
-        { namedComponents: 'arrow-function' },
+        { namedComponents: ['arrow-function', 'function-declaration'] },
       ],
       'react/self-closing-comp': ['error', { component: true, html: true }],
       'max-lines': ['error', { max: 124, skipComments: true }],
       'max-params': ['error', 3],
-      'react/function-component-definition': 'off',
     },
   },
 );
