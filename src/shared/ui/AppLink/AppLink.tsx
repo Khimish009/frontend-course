@@ -3,6 +3,7 @@ import { Link, LinkProps } from 'react-router-dom';
 import cls from './AppLink.module.scss';
 import { FC } from 'react';
 
+// TODO: Вынести в другой файл
 export enum AppLinkTheme {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
