@@ -1,4 +1,5 @@
 import type { Config } from 'jest';
+import path from 'path';
 
 const config: Config = {
   clearMocks: true,
@@ -12,6 +13,7 @@ const config: Config = {
   rootDir: '../../',
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
   },
   moduleDirectories: ['node_modules'],
   moduleFileExtensions: [
