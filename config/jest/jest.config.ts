@@ -7,7 +7,12 @@ const config: Config = {
   coveragePathIgnorePatterns: ['/node_modules/'],
   testEnvironment: 'jsdom',
   testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTest.ts'],
+  modulePaths: ['<rootDir>src'],
   rootDir: '../../',
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+  },
   moduleDirectories: ['node_modules'],
   moduleFileExtensions: [
     'js',
