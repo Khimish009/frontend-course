@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'; // TODO: Think laters
 import 'app/styles/index.scss';
 import { BrowserRouter } from 'react-router-dom';
 
 export const decorators = [
   Story => (
     <BrowserRouter>
-      <Story />
+      <div className="app light">
+        <Story />
+      </div>
     </BrowserRouter>
   ),
 ];
