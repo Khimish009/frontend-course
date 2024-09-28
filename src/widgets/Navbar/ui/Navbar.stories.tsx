@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Navbar } from './Navbar';
 
@@ -12,4 +13,15 @@ type Story = StoryObj<typeof Navbar>;
 
 export const Light: Story = {
   args: {},
+};
+
+export const Dark: Story = {
+  args: {},
+  decorators: [
+    Story => (
+      <div className="app dark">
+        <Story />
+      </div>
+    ),
+  ],
 };
