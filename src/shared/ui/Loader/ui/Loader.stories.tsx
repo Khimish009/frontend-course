@@ -1,15 +1,15 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { PageLoader } from './PageLoader';
+import { Loader } from './Loader';
 
-const meta: Meta<typeof PageLoader> = {
-  title: 'widgets/PageLoader',
-  component: PageLoader,
+const meta: Meta<typeof Loader> = {
+  title: 'shared/Loader',
+  component: Loader,
   tags: ['autodocs'],
 };
 
 export default meta;
-type Story = StoryObj<typeof PageLoader>;
+type Story = StoryObj<typeof Loader>;
 
 export const Light: Story = {
   args: {},
