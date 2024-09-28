@@ -7,11 +7,13 @@
     "start": "webpack serve --env port=3000",
     "build:prod": "webpack --env mode=production",
     "build:dev": "webpack --env mode=development",
-    "unit": "jest --config ./config/jest/jest.config.ts",
     "lint": "ESLINT_USE_FLAT_CONFIG=true npx eslint . --report-unused-disable-directives --max-warnings 0 && stylelint '**/*.css' --max-warnings 0",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true npx eslint . --fix --report-unused-disable-directives --max-warnings 0 && stylelint '**/*.css' --fix --max-warnings 0",
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "npx loki test",
+    "test:ui:ok": "npx loki approve",
     "storybook": "storybook dev -p 6006 -c './config/storybook'",
-    "build-storybook": "storybook build -c './config/storybook'"
+    "storybook:build": "storybook build -c './config/storybook'"
   },
   "keywords": [],
   "author": "",
@@ -61,6 +63,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "loki": "^0.35.1",
     "mini-css-extract-plugin": "^2.5.3",
     "prettier": "^3.3.3",
     "react-refresh": "^0.14.2",
@@ -95,5 +98,20 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.docker",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.docker",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
