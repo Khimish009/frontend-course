@@ -26,6 +26,7 @@ export default tseslint.config(
       'eslint.config.js',
       'build',
       '.history',
+      'storybook-static',
     ],
   },
   js.configs.recommended,
