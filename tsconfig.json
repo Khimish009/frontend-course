@@ -23,6 +23,7 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./config",
-    "webpack.config.ts"
+    "webpack.config.ts",
+    "eslint.config.mjs"
   ]
 }
