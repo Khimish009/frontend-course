@@ -1,0 +1,1 @@
+export { AppLinkTheme } from './link';
